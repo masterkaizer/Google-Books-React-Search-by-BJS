@@ -2,9 +2,15 @@
   "name": "googlebooksearchbybs",
   "version": "0.1.0",
   "private": true,
-  "repository": {"url": "https://github.com/masterkaizer/Google-Books-React-Search-by-BJS.git"},
-  "contributors": ["masterkaizer"],
-  "author": {"name": "brandon j sellam"},
+  "repository": {
+    "url": "https://github.com/masterkaizer/Google-Books-React-Search-by-BJS.git"
+  },
+  "contributors": [
+    "masterkaizer"
+  ],
+  "author": {
+    "name": "brandon j sellam"
+  },
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
