@@ -25,6 +25,5 @@
     "ejs-lint": "^0.3.0",
     "concurrently": "^3.5.1",
     "nodemon": "^1.17.5"
-
   }
 }

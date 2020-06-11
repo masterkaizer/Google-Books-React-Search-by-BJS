@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const bodyparser = require('body-parser');
 const nocache = require('nocache');
+const { Mongoose } = require('mongoose');
+const mongoose = require("mongoose");
 
 
 const app = express();
@@ -33,7 +35,7 @@ require('./startup/db')();
 if (process.env.NODE_ENV == 'production') {
     require('./startup/prod')(app);
 }
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gb");
 app.listen(port, () => {
-    console.log('Server started at port ' + port);
+    console.log('🌎  ==> Server started at port ' + port);
 });
