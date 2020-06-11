@@ -25,7 +25,7 @@ app.use(bodyparser.json({ limit: '50mb', extended: true }));
 // bodyParser = {
 //     json: { limit: '50mb', extended: true },
 //     urlencoded: { limit: '50mb', extended: true }
-// }
+// // }
 // app.use(bodyParser);
 app.use(nocache());
 app.use(express.static(__dirname + '/dist/quotationTool/'));
@@ -35,7 +35,7 @@ require('./startup/db')();
 if (process.env.NODE_ENV == 'production') {
     require('./startup/prod')(app);
 }
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gb");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gb",{ useUnifiedTopology: true,  useNewUrlParser: true, useCreateIndex: true });
 app.listen(port, () => {
     console.log('🌎  ==> Server started at port ' + port);
 });
